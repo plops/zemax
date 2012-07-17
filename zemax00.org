@@ -7,7 +7,7 @@
     Jahre die zentrale Abteilung für Optikdesign und Simulation bei
     Zeiss geleitet hat, dem Ruf der Friedrich-Schiller-Universität
 
-- slides are on http://www.iap.uni-jena.de/teaching-lightBox-1-lectureID-12.html
+- english slides are on http://www.iap.uni-jena.de/teaching-lightBox-1-lectureID-23.html
 - z ist optische achse
 
 ** parameter
