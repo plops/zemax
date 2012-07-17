@@ -1,4 +1,6 @@
 * introduction
+- z ist optische achse
+** parameter
  - single step
  - surface and transition
  - wenn man ein system mit n flaechen hat, dann ist n immer die
@@ -41,7 +43,7 @@
   - linsenschnitt farbig hervorheben (z.b. kaufkomponenten gruen)
   - linsen vorruebergehend inaktiv schalten
 
-- solves
+** solves
  - chief ray angle (hauptstrahlwinkel z.b. bildraum telezentrisch)
  - marginal ray normal
  - aplanatic surface
@@ -53,7 +55,36 @@
    - holt sich wert des radius von woanders, z.b. bei symmetrischen
      systemen oder wenn baulaenge festgelegt ist
 
-- 3d geometrie
-  - man muss pseudoflaeche einfuehren
-  - komischerweise kann es keine verschiebung in z
-  - alle moeglichen drehwinkel sind moeglich
+** 3d geometrie
+- man muss pseudoflaeche einfuehren
+- komischerweise kann es keine verschiebung in z aber das kann man
+  ueber die dicke machen
+- alle moeglichen drehwinkel sind moeglich  
+- gruppe kippen oder zentrieren (z.b. ganzes objektiv oder fuer
+  toleranzen)
+- faltspiegel
+  - erst koordinatensystem in spiegel drehen
+  - dann spiegelwirkung
+  - dann nochmal spiegel koordinatensystem
+- surface properties / tilt-decenter
+  - wenn vor und hinter der flaeche +20 grad und -20 grad wird flaeche
+    gekippt, bisschen tueckisch
+- zeigt wie linsengruppe um 5mm in y verschoben wird
+  - insert, coordinatee break
+  - kann layout nicht mehr malen (nicht rotationssymmetrisch)
+  - stattdessen layout 3d
+  - in coordinate break linie decenter y auf 5mm setzen
+  - hinter der letzten flaeche einen coordinate break einsetzen y auf
+    -5mm
+  - update in layout 3d druecken
+  - pickup in zweiten coordinaten break setzen mit scale factor -1,
+    bei dicken muss man offset machen
+  - dann steht ein P neben den wert in der tabelle
+- flaeche um 10 grad kippen, dahinter um -10 grad
+- linke maustaste fenster in 3d layout um zu zoomen, unzoom
+- window clone, und dann flaeche wieder zurueckkippen, wenn man nicht
+  update in beiden drueckt, kann man vergleichen. overlay geht auch
+- heutzutage nutzt man kippen zum korrigieren (z.b. headmounted
+  device)
+- heute bis 12:30
+
