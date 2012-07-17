@@ -88,3 +88,55 @@
   device)
 - heute bis 12:30
 
+* definition of aperture and field
+- lichtkegel mit dem system licht transportiert (mikroskopiker: je
+  groesser oeffnungswinkel, mehr energie, mehr information; man
+  verlaesst aber paraxial bereich und die performance wird schlechter)
+- randstrahlen begrenzen den kegel
+- groesse vom objektpunkt macht kegel windschief, mittlerer strahl ist
+  hauptstrahl
+- abbildbare flaeche * winkel ist lagrange invariante
+- transportmass, dass das optiksystem korrigiert
+- unterschied fotographie (coma, verzeichnung, astigmatismus),
+  mikroskopie
+- lithographie objektiv hat grosses feld und grosse winkel (aber nur
+  eine wellenlaenge)
+- beugung an apertur bewirkt airy verteilung
+- man braucht also nicht besser optimieren als die airy verteilung
+- bei einzellinse sin u \approx 0.05 noch beugungsbegrenzt
+- achromat bis na=0.1 immer noch beugungsbegrenzt
+- darueber muss man mehr aufwand treiben
+- f-zahl F#=f'/Dex
+- fuer kleine aperturen F#=1/(2 NA)
+- stop position 
+- hauptstrahl geht durch die mitte dieser blendenebene (vom rand des
+  objekts)
+- randstrahl geht durch die kante (von mitte des objekts)
+- es ist nicht immer klar wo die blende ist, verallgemeinert zu pupille
+- physische blende in beide raeume abbilden nach objekt
+  (eintrittspupille) und bildraum (austrittspupille)
+- sind alle zueinander konjugiert, d.h. gehen durch abbildung
+  auseinander hervor
+- pupille legt den lichtstrom und die aufloesung fest, perspektive
+- wenn man zwei systeme zusammenbaut, muss man die pupillen matchen
+  (nicht nur die sehfelder)
+- pupille das auges (3.2 mm hinter der cornea), okular muss eine
+  entsprechende pupille haben
+- wenn nutzer eine brille traegt noch schwieriger
+- d.h. okular muss pupille mind. 20mm hinter der linse haben
+- sonst schaut man wie in ein schluesselloch und das feld schrumpft
+  sehr schnell zusammen
+- lage der eintrittspupille mit hauptstrahl, durchmesser mit
+  randstrahl
+
+- paraxiale und reale oeffnung muessen nicht identisch sein (bei
+  grossen aberrationen)
+- floating aperture by stop size, macht den kegel immer weiter auf,
+  bis er an irgendeinen rand stoesst
+- telezentrisch: hauptstrahl parallel zur optischen axe -> pupille ist
+  im unendlichen, dass muss man zemax explizit setzen, da ist auch
+  egal wo man den stop hinsetzt
+- afocal bild im unendlichen ist auch ein sonderfall
+ - dann macht spot diagram im bildraum keinen sinn. man muss das dann
+   im winkelraum machen. in zemax heisst das cosine space
+ - da braucht man planwelle als bezug
