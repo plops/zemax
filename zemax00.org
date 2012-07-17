@@ -1,0 +1,59 @@
+* introduction
+ - single step
+ - surface and transition
+ - wenn man ein system mit n flaechen hat, dann ist n immer die
+   bildebene und die objektebene hat index 0
+ - erster abstand hat index 0 und n-ter abstand wird nicht mehr
+   benoetigt -- das findet er nicht masslos clever
+ - ray path has fixed sequence 0,1, .. (n-1)
+ - in anderen programmen ist das zum teil anders
+ - 7 leute haben zemax am arbeitsplatz. am iap gibts nur wenige
+ - professor gross wird neues zemax befassen
+ - folien gibts auf iap seite
+ - notwendige daten
+   - system surfaces (radius)
+   - distances and parameters (length, material)
+   - stop surfaces
+   - wavelengths
+   - aperture
+   - field points
+ - optionale inputs
+   - finite diameter
+   - vignetting factors
+   - decenter and tilt
+   - coordinate reference
+   - weighting factors for wavelengths and field points
+   - multi configurations
+   - ...
+
+- f2 druecken um im zellen modus zahlen zu editieren
+- skalieren von systemen (patent daten analysieren) .. werden immer
+  auf brennweite 100 normiert (scale factor, wellenlaenge und beugung
+  werden nicht veraendert, asphaerenkonstanten werden intern
+  veraendert)
+- kataloglinsen einsetzen und umdrehen
+
+- was man an einer flaeche festlegen kann
+  - mit rechter maus auf zelle druecken Surface properties
+  - kugel, asphaere, kegelschnitt, toroidal lens (cylinder lens),
+    ideal lens, coordinate break (pseudoflaeche an der koordinaten
+    transformiert werden)
+  - linsenschnitt farbig hervorheben (z.b. kaufkomponenten gruen)
+  - linsen vorruebergehend inaktiv schalten
+
+- solves
+ - chief ray angle (hauptstrahlwinkel z.b. bildraum telezentrisch)
+ - marginal ray normal
+ - aplanatic surface
+ - element power
+ - marginal ray height (randstrahl hoehe im bild 0, frueher hat man
+   die letzte flaeche immer so gekruemmt, dass die in der bildebene
+   liegt)
+ - pickup
+   - holt sich wert des radius von woanders, z.b. bei symmetrischen
+     systemen oder wenn baulaenge festgelegt ist
+
+- 3d geometrie
+  - man muss pseudoflaeche einfuehren
+  - komischerweise kann es keine verschiebung in z
+  - alle moeglichen drehwinkel sind moeglich
