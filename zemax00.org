@@ -1,5 +1,15 @@
 * introduction
+- http://www.jenapolis.de/2012/05/prof-dr-herbert-gross-ist-neuer-professor-fuer-theorie-optischer-systeme-der-uni-jena/
+  - Prof. Gross Der 57-Jährige hat mehr als drei Jahrzehnte für das
+    Unternehmen Zeiss gearbeitet, bevor er jetzt den Schritt aus der
+    Wirtschaft in die Wissenschaft machte.
+  - Dass der erfahrene Wissenschaftler, der seit Mitte der 1990er
+    Jahre die zentrale Abteilung für Optikdesign und Simulation bei
+    Zeiss geleitet hat, dem Ruf der Friedrich-Schiller-Universität
+
+- slides are on http://www.iap.uni-jena.de/teaching-lightBox-1-lectureID-12.html
 - z ist optische achse
+
 ** parameter
  - single step
  - surface and transition
@@ -188,3 +198,22 @@ strahlen gestoppt werden)
  - statistical (gibts mittlerweile besseres: walton statistik ohne
    loecher)
 
+- raytrace fuer einen strahl (analysis-calculations-raytrace)
+- zemax macht alles real und paraxial
+- start koordinaten H (objekt)
+- pupille P 
+
+- system-wavelength (oder wav button)
+- 24 wellenlaengen eingeben
+- standard wellenlaengen sind auch da
+- photographie: gelbes natrium d,f (blau),c (rot)
+- mikroskopie F' e C' (mehr fuers auge optimiert)
+- wenn man die wellenlaengen so waehlt, dass er keine brechzahlen hat,
+  dann meckert er
+
+* 2 aufgaben:
+- spiegeltreppe, hinter dem letzten spiegel objektiv, aufgaben was
+  angeschaut werden soll
+  - editor-merrit function, optimiere fuer effl, weight 1, value 200
+- telezentrisches 4f system, beste bildebene, wann ist es
+  beugungsbegrenzt
