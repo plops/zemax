@@ -72,7 +72,8 @@
 - zeigt wie linsengruppe um 5mm in y verschoben wird
   - insert, coordinatee break
   - kann layout nicht mehr malen (nicht rotationssymmetrisch)
-  - stattdessen layout 3d
+  - stattdessen layout 3d, zeigt auch linien der randzylinder (lens
+    edges)
   - in coordinate break linie decenter y auf 5mm setzen
   - hinter der letzten flaeche einen coordinate break einsetzen y auf
     -5mm
@@ -140,3 +141,50 @@
  - dann macht spot diagram im bildraum keinen sinn. man muss das dann
    im winkelraum machen. in zemax heisst das cosine space
  - da braucht man planwelle als bezug
+
+- field data
+ - man kann bis zu 12 feld positionen definieren
+ - das ist sehr wenig fuer anamorphie
+ - vignettierungsfaktor (am rand ist der kegel kleiner, z.b. 70%)
+
+- suppress frame, damit mehr platz fuer das diagramm ist
+- in etwa spiegelsymmetrisch hilft unheimlich um asymmetrische fehler
+  zu korrigieren
+- 2d layout
+- hauptwellenlaenge ist meist die zweite
+- lasersysteme sind oft sehr gestreckt. dafuer kann man eine
+  anamorphotische darstellung machen (y-stretch)
+- analysis layout shaded model
+- mit gedrueckter maus das system drehen
+- opacity
+- strahl ring ist am angenehmsten
+- durchgeschnittenes objektiv (draw section)
+
+- materialien auf naechste woche verschoben
+- zwei uebungen hat er upgeloaded
+
+* scheme of raytrace
+- radius vorzeichen wird genutzt, um die richtige surface zu ermitteln
+- spiegel: medium ist mirror (ab da alle dicken negativ, wechselt von
+  rechts in linkssystem) -> sehr gewoehnungsbeduerftig
+- \r'=\D_H \R_H \F \R_V \D_V \F
+- equation of surface 2. order
+- konstanten enthalten flaechenparameter
+- c = 1/R kruemmung (planflaeche stetig)
+- zwei schiefe dicke 
+
+- probleme:
+ - linse mit negativer randdicke, da meckert siemens nicht
+ - totalreflexion, da meckert zemax und hoert mit raytrace auf
+ - physisch linse nicht getroffen (delete vignetting, damit die
+strahlen gestoppt werden)
+
+- ebener strahlfaecher (ray fan)
+- pupillenflaeche erfassen durch sampling in der pupille (ray cone)
+ - polar grid
+ - cartesian (rand ist schlecht)
+ - isoenergetic circular (ist ganz gut, vielleicht fuer mma?)
+ - hexgonal (erfasst rand ganz gut)
+ - statistical (gibts mittlerweile besseres: walton statistik ohne
+   loecher)
+
