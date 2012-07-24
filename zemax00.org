@@ -217,3 +217,81 @@ strahlen gestoppt werden)
   - editor-merrit function, optimiere fuer effl, weight 1, value 200
 - telezentrisches 4f system, beste bildebene, wann ist es
   beugungsbegrenzt
+
+* sweatt modell 
+  - diffraktiv optisches element
+  - unwrappen und mit hoher brechzahl (10000) als asphaere simulieren
+
+* grin media
+  - kann zemax gut
+  - split-step runge kutta
+  - braucht viel rechenzeit
+
+* technische optik
+  - brechzahl als funktion der koordinaten
+  - gradienten nur in z haben ueberragende eigenschaften
+  - axiale gradienten: 
+    - brechkraft einstrahlwinkelabhaengig
+  - in letzter zeit viel ueber geodaetische linsen
+    - gradienten herstellen ist ein alptraum
+  - problem mit antireflexbeschichtung bei gekruemmten gradientenindex
+    oberflaechen
+  - gradium linsen (zemax wegweisend)
+    - rein axialer gradient
+    - es gibt eine firma, die solche blanks verkauft, nicht ueber
+      diffusion ins volumen, sondern sehr viele slices werden
+      aufeinandergesprengt und thermalisiert -> sehr viel genauere
+      brechzahlprofile
+  - grintech fraunhofer iof
+    - macht sehr praezise axiale brechzahlprofile
+    - quadratische brechzahlfunktion (light confinement wie bei
+      fasern)
+    - lange linsen muessen auch noch korrigierenden term 4. ordnung
+      haben, um oeffnungsfehler in den griff zu kriegen
+    - man kann das nicht einfach so von der seite anfraesen
+
+* praxis: eingabe der gradienten
+  - chapter 11, surface types
+  - gradient1 ist radiales medium mit quadratischen und linearem term
+  - Delta t ist die schrittweite
+  - Nr1 ist quadratisch, setzen auf -.1
+
+  - gerade asphaere
+    - scheitelaradius 100
+    - hintere flaeche eben
+    - konische konstante 2
+    - a^4 term -.005 oder so
+    - in der mitte flach, am rand staerker geneigt
+    - surface sec
+      - punktzahlen sind immer 2potenz+1, damit man die optische achse
+        erwischt
+    - negative 6. ordnung ergibt einen wendepunkt (mag die fertigung
+      ueberhaupt nicht, weil das werkzeug abhebt)
+    - sec crosssection 
+    - taktile messung ist schlecht (schleifspur auf linse und man
+      trifft mitte nicht genau), besser computer generated hologram
+      und interferometrie
+    - C-z 4.ordnung und curvature variable
+    - editor merit function, spot radius (null ist gut) 
+      - ist 5 groessenordnungen besser geworden
+      - viel besser als airy (na ist relativ klein, daher kann man
+        muss man 3te ordnung bildfehler korrigieren, was wir hier
+        machen)
+      - jetzt muss man wieder raus
+
+  - tools->catalogs->glass
+    - schott, nBK7 (weil bleifrei)
+    - brechzahl von 300nm bis 2.5um
+
+  - general data (Gen), reiter glass catalog
+    - voreinstellung immer schott
+    - aber man kann noch mehr zulassen
+
+  - analysis->glass index->dispersion diagram
+
+  - floating glass
+  - model glass
+    - brechzahl, abbe zahl, anomale teildisperision
+    - damit kann man stetig optimieren
+    - setze n auf 3 und C-z nimmt dann das hoechst brechende (n=2.02
+      schott)
