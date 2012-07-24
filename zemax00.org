@@ -274,7 +274,7 @@ strahlen gestoppt werden)
     - C-z 4.ordnung und curvature variable
     - editor merit function, spot radius (null ist gut) 
       - ist 5 groessenordnungen besser geworden
-      - viel besser als airy (na ist relativ klein, daher kann man
+      - viel besser als airy (na ist relativ klein, daher kann man 
         muss man 3te ordnung bildfehler korrigieren, was wir hier
         machen)
       - jetzt muss man wieder raus
@@ -295,3 +295,74 @@ strahlen gestoppt werden)
     - damit kann man stetig optimieren
     - setze n auf 3 und C-z nimmt dann das hoechst brechende (n=2.02
       schott)
+
+- cardinal elemente sind paraxial definierte beschreibungsparameter
+  - brennweite (wenn man parallel reinkommt)
+  - es gibt die hauptebene. fiktive wo die ganze strahlumlenkung
+    stattfindet
+  - brennweite wird nicht zum scheitel, sondern zur hauptebene
+    gemessen die back focal plane, er mag den ausdruck ueberhaupt
+    nicht)
+  - scheitel bis brennpunkt ist die schnittweite (in englisch ist das
+  - je nach form charakteristische lagen (e.g. bei n=1.5 und
+    symmetrisch 1/3 1/3 1/3)
+  - bei konvex-plan eine identisch mit scheitel
+  - linsendurchbiegung (konstante brechkraft, randflaeche/mittenflaeche)
+     - durchbiegen ist eine der allerwichtigsten schritte bei der
+       optimierung
+     - brechungsgesetz ist nichtlinear -> bildfehler treten bei
+       grossen einfallswinkeln auf. 
+     - je nachdem, wie man die linse durchbiegt, bekommt man ganz
+       unterschiedliche winkel
+     - am besten ist gleichmaessige verteilung
+
+   - coma strahlen sind die, die am meisten stoeren (um hauptstrahl an
+     den rand der pupille)
+
+- fuer sammellinse s' negativ, s ist positiv
+- zuerst ideale linse
+- dicke linsen (z.b. plankonvexlinse nehmen und die brechzahl auf 2
+  setzen)
+- dann objektiv durchbiegen
+
+- vignettierung: beschnitt des strahlbueschels, wenn man schraeg durch
+  system durchgeht
+  - relativ komplexe beugungsfiguren, in z gestaffelt
+
+- analysis->calculations->cardinal points  
+  - fuer komplettsystem
+  - knotenebenen (wo winkel gleich bleibt)
+  - doppel gauss objektiv
+    - erste linse (settings 1..2) 
+
+- analysis->calculations->raytrace 
+  - durchrechnung von einem einzigen strahl
+  - feldpunkt und relative pupillenkoordinate
+  - durchstoss punkte
+  - richtungen der flaechennormale
+  - wellenaberrationen
+  - flaeche 7 hat starke umlenkung fuer randstrahl, flaeche 10 fast
+    konzentrisch
+  - linsenschnitt
+  - vermutlich projektion der y koordinaten 
+
+- aufmass durchmesser
+- zeisswerk in goettingen, bildweiche, bertrand optik
+  - einsatz aus kunststoff mit spanten beim prototyp ging das licht
+    nicht durch
+  - werksleiter hat das dann weggesaegt
+
+- fertigteilkataloge
+  - tools->catalogs->lens catalog
+  - asphericon
+  - melles griot, edmund, linos, newport, thorlabs
+  - suche von 95 bis 105, pupillen durchmesser 40..45
+  - einschraenkung der elemente (achromat als doublett)
+  - search
+  - efl ist brennweite, epd pupil diameter
+  - insert nach flaeche 11
+  - hat quarzlinse gewaehlt
+  - jetzt hat zemax irgendwas kaputtgemacht
+
+- asphericon ist fast weltweit die einzige firma mit asphaerischen
+  zylinderlinsen
