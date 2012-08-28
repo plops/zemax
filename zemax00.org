@@ -479,4 +479,39 @@ strahlen gestoppt werden)
   - 40000 patent system in zemax (zu 50% fotoobjektive)
   - radiien wirken extrem empfindlich
   - dicken viel weniger
-  
+  - es gibt nur standard radiien (wo man werkzeug fuer hat)
+  - glass wahl ist ein riesenproblem
+  - randdicken sollen nicht zu klein sein
+  - mittendicke soll nicht zu klein sein (dicke zu durchmesser sollte
+    nicht kleiner als 1:10 sein)
+  - beim zoom lineare nebenbedingung (damit summe der zwei abstaende
+    konstant bleibt)
+  - konzentrische flaechen vermeiden (wegen reflexen)
+  - toleranzunempfindlich korrigieren
+  - manager wollen kosten in merit funktion haben (aber das ist schwierig)
+  - kosten sind extrem dynamisch (kaum eine firma fertigt alles
+    selber, die preise sind nicht vorhersagbar)
+  - fertigung will gleichmaessige auslastung machen
+  - achromat mit flint vorraus
+  - global run dauert lange (z.b. am tag) und dann muss man aus 2700
+    system den kaese rausschmeissen, ausserdem muss die merit funktion
+    perfekt sein, im beispiel hat er vermeidung duenner und dicker
+    linsen abgeschalten
+  - glaswahl ist diskret aber springen ist nicht so gut
+  - man kann modellglas definieren 
+  - umschriebenes polygon nicht verletzen
+  - farbkorrektion moechte abbezahl spreizen
+  - bildfeldebnung versucht in n zu spreizen
+  - diagramm mit bildfehlern fuer sein buch
+  - cleverer ansatz: burried surfaces (kit glied, unterschiedliche
+    abbezahl aber identische brechzahl, grundfarbe sieht die flaeche
+    nicht, nur die farbe wird korrigiert -> entkopplung moeglich)
+  - haferkorn illmenau, frueher sehr viel analytische optimierung (in
+    praxis nicht wichtig)
+  - wenn man an ein optimimum gestossen ist und nicht besser wird,
+    dann kann man linse splitten (das hilft in der regel immer)
+  - oft macht man null-operationen die das minimum verlaesst, ohne das
+    minimum zu zerstaeren (linsen umdrehen, durchbiegen, duenne
+    miniskuslinse)
+  - es clever die seidelfehler uberall klein zu halten (dann ist es
+    toleranzunempfindlich)
