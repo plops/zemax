@@ -515,3 +515,7 @@ strahlen gestoppt werden)
     miniskuslinse)
   - es clever die seidelfehler uberall klein zu halten (dann ist es
     toleranzunempfindlich)
+  - negativ sollte wie lagrange multiplier wirken
+  - bedingungen kombinieren (gewicht 0), differenz zwischen beiden
+    soll verschwinden (z.b. zwischen zeilen 17 und 18)
+  
