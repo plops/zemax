@@ -366,3 +366,25 @@ strahlen gestoppt werden)
 
 - asphericon ist fast weltweit die einzige firma mit asphaerischen
   zylinderlinsen
+- load ersetzt das objektiv
+- zemax kann kein anamorphotisches spot diagram
+- bei 500 statt 780nm mit nachfokussieren ist sie nur gerade mal so beugungsbegrenzt
+- lutz leine vergibt accounts
+
+
+* asphaere um laserdiode zu kollimieren
+  - 0.4 NA, radius 4mm -> 10mm brennweite
+  - grosse streuung
+  - ueberpruefe dass alle asphaeren konstanten vorhanden sind
+  - wellenlaenge einrichten 650nm (fokus kuerzer als bei 780nm,
+    quickfocus)
+  - performance ist nicht mehr perfekt fuer 650nm aber gut genug (weil
+    sie fuer deutlich hoehere oeffnungen korrigiert ist)
+  - markieren und reverse, erste flaeche mitnehmen 
+  - apodisation uniform
+  - 1:4 anamorphotische form
+  - fast axis ist y schnitt
+  - x schnitt soll kleine aperture haben
+  - bei field kuenstliche vignettierung von 75% im x-schnitt einbauen
+    (man koennte auch auf die erste flaeche der linse eine elliptische
+    blende setzen, aber dann verliert man viele strahlen)
