@@ -388,3 +388,95 @@ strahlen gestoppt werden)
   - bei field kuenstliche vignettierung von 75% im x-schnitt einbauen
     (man koennte auch auf die erste flaeche der linse eine elliptische
     blende setzen, aber dann verliert man viele strahlen)
+  - fenster clonen und 90 grad um z achse drehen, im y schnitt nur y
+    strahlen
+  - man koennte den front abstand nachoptimieren fuer die geringer
+    apertur
+  - strahlquerschnitt ist jetzt elliptisch
+  - 2mm dahinter eine zylinderlinse (im prinzip ist sie falschrum
+    gekruemmte seite sollte richtung paralleln strahl gehen)
+  - ein paar pseudoflaechen einfuegen (weil das beim nachtraegliche
+    einfuegen immer abstaende ueberschreibt)
+  - suche toroidal von -100 bis -10mm (im beispiel hat er -25 und 100
+    gemacht, dann sind die winkel klein genug. kuerzere brennweiten
+    liefern kleinere baulaenge, sind aber schwieriger zu optimieren
+    (wegen hoeheren winkeln))
+  - zylinderlinse wirkt im falschen schnitt
+  - flaeche 3 und 4, tools, tilt and decenter elements, tilt in z um
+    90 grad, fuegt automatisch zwei pseudoflaechen mit koordinate
+    break ein
+  - jetzt eine +100 zylinderlinse (mindestdurchmesser 8mm) mit
+    planflaeche nach vorn bei ungefaehr 75mm
+  - den abstand 75mm auf variabel setzen, merrit entweder wellenfront
+    eben (dann muesste man explizit sagen, dass bildraum afokal ist)
+    oder winkelaufspreizung soll verschinden (letzteres ist einfacher)
+    optimieren bringt 67mm und ist faktor 10 besser
+  - analysis ..., kreisfoermigkeit des querschnitts ueberpruefen,
+    leichte elliptizitaet bleibt uebrig: 4.18 zu 4.03, weil
+    verhaeltnis der brennweiten nicht exakt 1:4 war
+  - im spotdiagramm die richtungscosinus anzeigen (restfehler von
+    0.1mrad im kollimierten strahl)
+  - mit brennweite 40 in faser kollimieren
+  - suche sphaerisch 35..45
+  - 41mm mit 11mm durchmesser, sieht aber uebel aus, ist fast
+    randscharf
+  - spot auf der faser ist 3 mal beugungsbegrenzt
+  - mit achromat fuer die letzte linse wird es gleich besser
+  - zernike koeffizienten zeigen wie es verbessert werden kann
+  - die diagonale wurde jetzt nicht optimiert, bei hoeheren winkeln
+    wird das wichtig
+  - ausgehend von dem grundlayout koennte man jetzt noch mehr
+    optimieren
+  - alle abstaende zwischen den linsen variabel
+  - numerische apertur hinten auf 0.1 halten (WFNO, oeffnungszahl 4.85
+    soll konstant bleiben)
+  - merrit spot, mehr strahlen, luftabstaende positiv lassen
+  - wird nicht viel besser (mit dieser einzellinse)
+
+* optimierung
+  - einfaches beispiel mit zwei variablen, die merritfunktion ist ein
+    relief, man kann in der landschaft einen weg suchen um
+    runterzukommen
+  - wie gross macht man die schritte und in welche richtung?
+  - parametervektor \x
+  - targetwerte \f(\x)
+  - jacobi matrix der ableitungen J_ij = \partial f_i / \partial x_j
+  - scalare merrit funktion F(\x) = sum_i=1^m w_i [y_i-f(\x)]^2
+  - manchmal nutzt man auch noch die kruemmung (hessematrix) um die
+    schrittweite zu optimieren
+  - lineares gleichungssystem im aktuellen arbeitspunkt \f = \f_0 + J \x
+  - man kann zweite ableitung nehmen um quadratische naeherung der
+    merit function zu bekommen
+  - ableitungen kann man in der optik nur numerisch ausrechnen
+    (frueher mit 7 stellen mantisse war das wichtig, heute nicht mehr
+    so kompliziert)
+  - in der regel hat man auch randbedingungen. entweder man forder sie
+    hart (lagrange multiplier der nebenbedingung exakt erfuellt (fuer
+    mathematik in der regel ein problem) oder die merit funktion
+    aendern)
+  - x1<0 zwingt im bild den algorithmus in ein lokales minimum
+  - bereiche: die dicke muss positiv sein, wellenapertur soll kleiner
+    als lambda/10 sein
+  - weiche forderung: penalty oder barriere functions, dann kann man
+    die ableitung bilden
+  - abstiegsmethode oder least square (wird in optik verwendet)
+  - ungedaempft macht manchmal zu grosse schritte
+  - DLS (damped least squares)
+  - daempfung oft additiv (verstaerkt die diagonale im
+    gleichungssystem)
+  - wenn der startwert nichts taugt, taugt auch das ergebnis nicht
+  - im optikdesign sehr schmale lange taeler
+  - globale verfahren fassen langsam fuss im optik design
+  - heutzutage kriegt ein erfahrener designer es schneller hin als ein
+    globaler optimierer
+  - einzelne ansaetze mag er
+  - simulated annealing
+  - am anfang mit geometrischen abberationen und fuer das fine tuning
+    dann wavefront oder strehl ratio
+  - voneinander abhaengige variablen lassen sich nicht optimieren
+    (z.b. zwei asphaeren hintereinander)
+  - mittlerweile gibt es gut literatur oder patentarchive
+  - 40000 patent system in zemax (zu 50% fotoobjektive)
+  - radiien wirken extrem empfindlich
+  - dicken viel weniger
+  
