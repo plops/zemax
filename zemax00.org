@@ -544,4 +544,10 @@ strahlen gestoppt werden)
       - oder einfacher durchmesser ausrechnen mit gegebener brennweite
         und NA
   - materialien BK7 und SF12
-  - 
+  - DIVI division of two operands
+    - y/cos(beta) schnittweite vom randstrahl ist momentan 19 
+    - fuer paraxial auch nochmal
+    - beide schnittweiten sind nur hilfgroessen (benutze gewicht 0)
+    - optimiere, dass beide schnittweiten gleich werden
+    - longitudinal operation
+    - der strahl muss an der bildebene benutzt werden
