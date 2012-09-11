@@ -519,3 +519,7 @@ strahlen gestoppt werden)
   - bedingungen kombinieren (gewicht 0), differenz zwischen beiden
     soll verschwinden (z.b. zwischen zeilen 17 und 18)
   
+
+* cooke 40 degree
+  - system modifizieren fuer 150 mm objekt distanz
+  - 
