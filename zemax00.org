@@ -522,4 +522,26 @@ strahlen gestoppt werden)
 
 * cooke 40 degree
   - system modifizieren fuer 150 mm objekt distanz
+  - settings, first surface=0
+  - merit funktion aufbauen
+    - linsen dicken einschraenken
+    - gesamt laenge 210mm, TOTR, objekt abstand mit beruecksichtigen
+    - analysis um farben zu trennen
+    - gruen auf achse ist beugungsbegrenzt, das andere nicht
+    - oeffnung vergroessern
+      - rms vs. wavelength -> fernab der beugungsgrenze
+      - oeffnung zuziehen bis komplette kurve unter beugungsgrenze
+      - bei 7mm beugungsbegrenzt fuer achse und feld fuer alle
+        wellenlaengen
+
+* dritte aufgabe: klassischer achromat
+  - drei flaechen fuer achromat
+  - brennweite EFL 10mm mit merit funktion
+  - hide unused column fuer kompaktere darstellung
+  - bildseitige NA 0.05
+    - general data entweder:
+      - image space: f-number oder object cone angle
+      - oder einfacher durchmesser ausrechnen mit gegebener brennweite
+        und NA
+  - materialien BK7 und SF12
   - 
