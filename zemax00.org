@@ -551,3 +551,74 @@ strahlen gestoppt werden)
     - optimiere, dass beide schnittweiten gleich werden
     - longitudinal operation
     - der strahl muss an der bildebene benutzt werden
+
+  - oslo ist billiges raytracer program (gibt kostenlose EDU version)
+
+* imaging and illumination
+** definitionen fourier optik
+  - ebenes gitter mit monochromatischer planwelle bestrahlen
+  - licht geht strukturiert in verschiedene richtungen
+  - fourier zerlegung des ausgehenden wellenfeldes in einzelne
+    planwellen, die durch strahlen charakterisiert werden
+  - transversaler wellenvektor oder winkel theta (geometrisch
+    optisch), ortsfrequenz nu (signalverarbeitung)
+  - fuer low NA sind obige darstellungen identisch
+  - konstruktive interferenz von drei wellen, die durch linse gehen
+  - finden gitterkonstante des objekts im bild wieder
+  - je mehr ordnung, desto schoener das bild
+  - faltungsintegral, falls punktbildfunktion unabhaengig von position
+    im feld
+  - durchmesser der ersten nullstelle der airy funktion 1.22 lambda /NA
+  - duffieux-integral (pupillenformen ueberlappen)
+  - absolutwert der OTF ist MTF
+  - fuer koheraente bildgebung faltet man amplituden
+  - zemax ist zur zeit ziemlich unuebersichtlich in dieser hinsicht
+  - partielle koheraenz kann man mit zemax auch machen (seiner ansicht
+    nach falsch)
+  - im realen system gibt es in der regel keine shift-invarianz
+  - isoplanasie (kleines feld, wo annahme einer konstanten psf relativ
+    gut erfuellt wird)
+  - zwischen psf interpolieren ist nicht so einfach (vermutlich
+    interpolieren die die zernicke polynome in der pupille)
+  - in code 5 ist es besser geloest (auch partielle kohaerenz)
+  - psf-x points (anzahl psf entlang der x achse)
+*** demo in zemax
+    - double gauss
+    - analysis, image simulation
+*** weiter lecture
+    - radiance ist wichtig (pro winkel)
+    - irradiance ist klassische intensitaet
+    - photometrische einheiten beziehen sich auf das menschliche auge
+    - raumwinkel
+    - irradiance ist leistungsdichte an der flaeche, je groesser der
+      einfallswinkel, um so weniger hell
+    - 1/r^2 und zweimal cosinus fuer sender und empfaenger
+    - helmholtz inveriante: feldgroesse * NA ist konstant
+    - fuer endlich grosse winkel sinus bedingung
+    - wenn man homogene flaeche von der seite anschaut, wird bild
+      inhomogen
+    - natuerliche vignettierung (projektion, cos^4 des feldwinkels)
+    - gruener strahl ist 1/cos laenger
+    - cos^4 ist schmerzhaft bei grossen winkeln (fotographie), kann
+      man auch kaum verhindern
+    - kuenstliche vignettierung (im system)
+    - phasenraum (sein spezialgebiet)
+    - shack hartmann sensor oder faser braucht nichtsequentielles
+      raytrace
+    - doppelreflexe koennen oft stoerend wirken (geisterbilder)
+    - ihm ist das erste mal nichtsequentielles raytracing begegnet bei
+      einem YAG laser
+    - doppel elliptische spiegelanordnung
+    - moeglichst homogen (am besten mit gauss profil) laser pumpen
+    - in zemax:
+      - einfach vignettierung im rotationssymmetrischen system rechnen
+      - einzelne flaeche als nicht-sequentielle komponente definieren
+      - komplett anderer betriebsmodus, dann ist alles anders
+        - man brauch z.b. abbruchbedingungen (relative strahlenergie
+          oder anzahl interaktionen)
+      - deutlich besser als andere programme
+        - man kann strahlen akkumulieren (dafuer muss man sagen,
+          wieviel strahlen gespeichert bleiben sollen)
+*** demo
+  - vignetting plot zeigt kuenstliche vignettierung
+
