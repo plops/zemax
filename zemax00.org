@@ -630,4 +630,14 @@ strahlen gestoppt werden)
 - analysis footprint -> 27% der strahlen gehen in die faser
 - flaechentyp, non-sequential component (faser macht zahl der reflexe
   abhaengig vom eintrittswinkel)
-- non-sequential component, typ festlegen auf
+- non-sequential component, typ festlegen auf cylinder light pipe
+- ein paar parameter unten eingeben
+  - oben: faser soll 20mm lang sein, exit location
+  - unten:
+    - material aussen verspiegelt (mirror)
+    - laenge 20
+    - front radius und back radius (halber durchmesser) .002 
+- anzeigen im 3D modus
+- delete vignette, so dass geblockte strahlen nicht weitergezeichnet
+  werden
+- erheblich viel mehr strahlen durchschicken
