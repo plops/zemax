@@ -746,7 +746,54 @@ strahlen gestoppt werden)
     - mit Strg-A umherspringen
     - scan-systeme oder zoom-systeme
     - tauschsystem
+    - interferometer -> test-arm
+    - fuer brennweiten 1, 2 und 5 gleichzeitig optimieren
+    - trauriger fall, wo zoom system gebaut wurde was hinten vorne und
+      in der mitte funktioniert aber nicht dazwischen
+    - einfaches zoom, mit nur einer beweglichen linse
+      - 5 konfigurationen
+      - 0, 25, 50, 75, 100, linse von ganz links nach ganz rechts
+      - konfiguration matrix, alle spots nebeneinander darstellen
+      - 3d schnitt mit allen konfigurationen darstellen und in y
+        auseinanderziehen (manager konform), das ist ganz gut geloest
+      - merit funktion fuer alle stellungen gleichzeitig
+      - offenbar kann man keine gewichte zu einzelnen konfigurationen
+        zuordnen
+      - interferogram mit zwei konfigurationen, sehr schoen
+        - ziemlich schwierig einzugeben, in einer konfiguration
+          reflexion im anderen transmission
+        - mit slider fokussieren auf kleinste ringzahl
   - fasern mit einigen moden geht gar nicht
+    - entweder rein geometrisch
+    - oder spezialmenu fuer monomode faser LP00 mode
+    - psf in bildebene mit klassischem beugungsintegral und ueberlapp
+      der komplexen felder (physikalisch korrekt)
+    - im POP kann man auch winkelabhaengige fresnelkoeffizienten der
+      reflexion benutzen (36% vs 29%)
   - macro sprache .. nicht besonders schoen, aber es geht
+    - kaum moeglichkeit zum debuggen
+    - zernicke polynome, viele parameter fuer funktionen
+    - graphischer output primitiv
+    - normalerweise exportiert er alle daten in datei und benutzt dann
+      matlab
+    - man kann parameter wackeln
+    - keneth moore war einer der wegbereiter von zemax
+      - beispiel, um schwerpunkt zu bestimmen
+      - sieht alles aus wie fortran
+      - er benutzt sie sehr viel und es macht wenig spass, wenn man
+        fehler drin hat
   - DLL
+    - user defined surfaces sind moeglich
+    - C oder C++ routine als DLL
+    - schnittstelle ist nicht schoen dokumentiert
+    - relativ schnell
+    - sie hatten mal beispiele, da machte das sinn
+    - freiform flaechen oder facettierte flaechen
   - matlab (macht er standardmaessig immer)
+    - leider hat zemax keine com schnittstelle (da warten eigentlich
+      alle drauf)
+    - gut programmierte toolbox
+    - direktprogrammkopplung
+    - funktioniert nicht immer
+    - matlab weiss nicht, wenn zemax fertig ist
+    - mit 64bit gehts irgendwie nicht mehr
