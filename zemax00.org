@@ -729,10 +729,23 @@ strahlen gestoppt werden)
       - zweidimensionale optimierung mit asphaerenkonstanten auf
         beiden seiten
   - mit slider einzelne parameter aendern .. nette spielerei
-    
+    - Tools/Design
+    - -1e-6 .. 0
   - visuelle optimierung .. mag er nicht
+    - macht eher sinn fuer zoom system
   - daten rausholen
+    - mit window textfenster aufmachen
+    - anzahl der stellen kann offenbar nicht angepasst werden
+    - CAD daten in STEP oder IGES exportieren
+      - auch mit strahlen
+      - designer kann dann die mechanik um die optik basteln
+      - zoom wird als einige positionen uebergeben
   - multikonfiguration .. mehrer system typen gleichzeitig betrachten
+    - das ist sehr nuetzlich
+    - system in mehreren zustaenden unterscheiden
+    - mit Strg-A umherspringen
+    - scan-systeme oder zoom-systeme
+    - tauschsystem
   - fasern mit einigen moden geht gar nicht
   - macro sprache .. nicht besonders schoen, aber es geht
   - DLL
