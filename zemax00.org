@@ -622,3 +622,12 @@ strahlen gestoppt werden)
 *** demo
   - vignetting plot zeigt kuenstliche vignettierung
 
+
+* beispiel: faser einkoppeln
+- achromat, quick focus
+- statistisch spot mit 13um durchmesser
+- faser mit 4um durchmesser
+- analysis footprint -> 27% der strahlen gehen in die faser
+- flaechentyp, non-sequential component (faser macht zahl der reflexe
+  abhaengig vom eintrittswinkel)
+- non-sequential component, typ festlegen auf
