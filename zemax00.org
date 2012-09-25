@@ -641,3 +641,70 @@ strahlen gestoppt werden)
 - delete vignette, so dass geblockte strahlen nicht weitergezeichnet
   werden
 - erheblich viel mehr strahlen durchschicken
+- hinten keine bildebene mit kleinem loch lassen!
+- am ende der faser ist es in der mitte hell
+- strahlt mit relativ gleichmaessiger winkelverteilung ab
+- lichtleiter wirken homogensierend, wenn man mit ihren querschnitt
+  die ebene parkettieren kann (rechteck, dreieck oder sechseck aber
+  nicht kreis)
+- optimierung: general data->non-sequential maximal strahl events
+  einstellen, so dass er nicht nach 100 reflexionen aufhoehrt, den
+  strahl zu zeichnen
+
+* 6 advanced handling
+  - telezentrie
+    - hauptstrahl parallel zur optischen achse .. pupille ist im unendlichen
+    - im editor muss man eigentlich immer sagen wo die blende liegt
+      (da schneidet der hauptstrahl die optische achse)
+    - durch diese option 
+    - feld als winkel eingeben
+  - unendliche objektabstaende
+    - astronomie
+    - numerische apertur als durchmesser, statt winkel
+    - objekt als feldwinkel spezifizieren
+    - da kommen dann immer nervige fehlermeldung
+    - es kann nicht gleichzeitig telezentrie und objekt im unendlichen sein
+  - afokales bild
+    - bildraum afokal in General/Apertur
+    - aberrationen als winkelstoerungen anschauen (ortsabweichung)
+    - oder wellenaberrationen gegen planwelle
+    - spot wird automatisch in mrad angezeigt aber man kann auch
+      richtungscosinus einstellen
+  - koordinatensysteme fuer 3D, umfaltenden spiegel
+    - General/Misc
+    - global coordinate reference surface (6 .. bildebene)
+    - z.b. um entweder von bild oder objekt zu messen
+  - scale system
+    - Tools/Miscellaneous/Scale
+    - aendert verhaeltnis geometrische optik zur wellenoptik
+    - Modify/Make focal, skalieren um exakte brennweite zu erreichen
+  - umlenkspiegel
+    - brauchen eigentlich zwei koordinatentransformationen
+    - Tools/Modify/add folding mirror
+    - kippung um x-achse um 90 grad, macht danach dicken negativ
+  - make double pass .. fuer doppelten durchgang fuer refraktiv
+    (interferometer oder reflexe)
+    - radien gleiches vorzeichen, dicken negativ
+  - vignettierung und durchmesserarten ist komplex
+    - durch gekipptes foto objektiv von hinten durchschauen
+    - schwerpunkt der flaeche ist der schwere strahl (physikalisch
+      wirksamer hauptstrahl)
+    - oft (wenn man zwei kreisfoermige linsen hat) bekommt man
+      zweiecke
+    - surface stop begrenzt in zemax nicht wirklich die apertur,
+      sondern definiert nur, wo hauptstrahl opt. achse schneidet
+    - float by stop size
+    - eins der schwierigsten probleme ist eine linse, die in der mitte
+      durchgebohrt ist (praktisch?)
+    - jeder feldpunkt einzeln schwerstrahl einstellen
+    - set vignetting setzt automatisch schwerstrahl und kompression
+  - wie man eigene materialen eingibt und dispersion, koefficienten
+    ausrechnen laesst
+  - mit slider einzelne parameter aendern .. nette spielerei
+  - visuelle optimierung .. mag er nicht
+  - daten rausholen
+  - multikonfiguration .. mehrer system typen gleichzeitig betrachten
+  - fasern mit einigen moden geht gar nicht
+  - macro sprache .. nicht besonders schoen, aber es geht
+  - DLL
+  - matlab (macht er standardmaessig immer)
