@@ -696,11 +696,40 @@ strahlen gestoppt werden)
     - float by stop size
     - eins der schwierigsten probleme ist eine linse, die in der mitte
       durchgebohrt ist (praktisch?)
-    - jeder feldpunkt einzeln schwerstrahl einstellen
-    - set vignetting setzt automatisch schwerstrahl und kompression
-  - wie man eigene materialen eingibt und dispersion, koefficienten
+    - optimierung:
+      - jeder feldpunkt einzeln schwerstrahl einstellen
+      - set vignetting setzt automatisch schwerstrahl und kompression
+      - dann werden strahlen automatisch dahin geschickt, wo sie gut durchgehen
+  - wie man eigene materialen eingibt und dispersion, koeffizienten
     ausrechnen laesst
+    - eigene daten fuer immersionsoele
+    - SiO2 mit hoher genauigkeit fuer lithographen
+    - herzberger ist eher etwas schlecht
+    - sellmeier ist besser
+    - Tools/Catalogs/Glass Catalogs
+      - zwei optionen: Fit index data, fit melt data
+      - bei melt daten sieht man gut die abweichung
+      - daten von saphir (nur ordentliche brechzahl) laden, bei fit
+        index data sieht man nur globale abweichung
+    - man kauft glas mit verschiedenen index qualitaeten (rechteck in
+      abbe diagramm)
+    - ein einziges mal hat er erlebt, dass zeiss spezielles glas
+      bestellt hat, da muss man 2 tonnen bestellen und ein jahr warten
+  - report graphics
+    - mehrere fenster zusammenstellen
+  - universal plot
+    - individuelle graphiken ueberlegen 
+    - asphaerische einzellinse
+    - wellenfront optimierung ist meist schlechter als spot (obwohl
+      physikalisch equivalent)
+    - Analysis/unversal plot
+      - querabweichung vs. asphaerenkonstante
+      - optimiere auf strehlzahl
+      - oeffnung verkleinern, um an beugungsgrenze zu kommen
+      - zweidimensionale optimierung mit asphaerenkonstanten auf
+        beiden seiten
   - mit slider einzelne parameter aendern .. nette spielerei
+    
   - visuelle optimierung .. mag er nicht
   - daten rausholen
   - multikonfiguration .. mehrer system typen gleichzeitig betrachten
