@@ -799,4 +799,142 @@ strahlen gestoppt werden)
     - mit 64bit gehts irgendwie nicht mehr
 
 * konstruktion eines mach-zehnder interferometer mit multikonfiguration
+  - zernike flaeche (wellige stoerung)
+  - zernike fringe
+  - parameter im data menu einstellen
+  - 5. ordnung in zernike -> 16 koeffizienten
+  - parameterwerte in mm
+  - entweder mit idealer linse schauen oder general->afokaler bildraum
+  - geht mit physical optics besser
+
+* correction
+  - symmetrie
+  - bild zeigt chromatische bild vergroesserungs differenz
+  - coma geht mit feldhoehe linear (schlimmster fehler)
+  - wichtig bei fotographie
+  - quasi-symmetrisch ist auch gut
+  - biogon: extremes weitwinkel fuer aufklaerung
+  - mikroskop objektiv ist ueberhaupt nicht symmetrisch
+  - durchbiegung (bei konstanter brennweite)
+    - massstabsparameter M
+    - bei 4f kein nulldurchgang -> oeffnungsfehler nicht korrigierbar
+      mit einzellinse
+    - bei extremer abbildung geht kann man offnungsfehler korrigieren
+  - bei groesseren winkeln bekommt man bildfehler durch
+    nichtlinearitaet des sin im brechungsgesetz
+    - inzidenzwinkel auf vorder und rueckseite verteilen
+    - beim letzten ist eine flaeche zur kompensation anders herum
+      gebogen (kingslake quartett)
+    - bei endlich grossen bildfeld sind sphaeren viel toleranter als
+      asphaeren, eine asphaere ist so teuer wie drei linsen
+      - d.h. fuer laser asphaere
+      - im photoobjektiv muss man sich das 3 mal ueberlegen
+  - achromat hat zwei moeglichkeiten normalerweise b, kron linse vorn,
+    als sammel linse, staerker gekruemmte in parallel strahl
+  - fuer grosse brechzahlen besser (IR germanium n=4, deshalb gute
+    korrektionssysteme, keine verkittung, teures material, duenne
+    linsen, stark durchgebogen)
+  - bei glas faktor zwei gewinnbar 1.5 .. 1.9
+  - hochbrechende schwerflinte haben probleme mit uv transmission
+    (irgendwelche ionen fuehren zu hoeherer restabsorption)
+  - einzellinse grundsaetzlich unterkorrigiert
+  - 3 linsen mit 1.8 1000x besser als 1.5 (z.b. fuer interferometer
+    objektiv mit einer wellenlaenge)
+  - koma
+    - oben und in mitte unterschiedliche inzidenzwinkel
+    - hauptstrahl geht durch blendenmitte
+      - daher blendenposition aendert koma
+      - im fokus coma-freihe blendenposition
+      - bei asphaeren kann man da nichts machen
+  - verzeichnung = oeffnungsfehler des hauptstrahls
+    - blender vor oder hinter linse
+    - blende vor linse, sammellinse -> tonnen verzeichung
+  - astigmatismus
+    - extrem von durchbiegung der linse beeinflusst
+    - strahl sieht unterschiedliche kruemmungsradien
+    - unterschiedliche kruemmungen der bildschale
+    - seidel flaeche 1 und 2, zwei nulldurchgaenge
+    - aber bildfeldwoelbung ist nicht korrigiert
+  - bildfeldwoelbung 
+    - kann man gut analytisch kontrollieren
+    - gekruemmte ccds sind schrecklich schlecht
+    - satz von petzval (100 jahre vor abbe!)
+    - in erster naeherung als parabel
+    - einfache summenformel
+    - jeweils zwei flaechen einer linse zusammengefasst liefert eine
+      einfache formel
+      1/R = - sum_j 1/(n_j f_j)
+    - spaltlampe augenartzt will scharfes bild auf cornea -> sehr
+      kompliziert
+    - fuer jede einzelne linse geht bildwoelbung nicht ein
+    - zum ebenen braucht man auf jeden fall zerstreungslinsen (mit
+      kleiner brechzahl) kombinieren
+    - bis zum exzess angewendet in 15 jahre alten lithographie objektiv
+      - maske faktor 4 oder 5 verkleinert auf waver abbilden
+      - bei negativen geht der durchmesser des systems wieder hoch
+      - wellen (bulges), werden immer mehr
+      - 193nm grundprinzip
+      - transmission von 80% bei 30 linsen (60 flaechen)
+      - 1e-4 absorptionsverluste der coatings
+      - frueher 40% transmission aber dann excimer laser thermische probleme
+      - heutzutage wird auch beleuchtung optimiert um strukturen
+        bestmoeglich abzubilden (pupille nicht homogen)
+      - heute mit dlp frueher mit masken
+    - bildfeldebenung mit feld linse
+      - linse direkt in der bildebene aendert masstab etwas
+      - wirkt sehr gut aber buescheldurchmesser werden sehr klein und
+        kratzer werden sofort wirksam
+  - axiale farbfehler
+    - kleine abbe-zahl schwer-flint, dispergieren stark
+    - hat abbe nicht clever gewaehlt
+    - im achromat abbezahl 64, 36
+    - nullte ordnung: blau und rot gleiche schnittweite
+    - gauss fehler am bildrand 
+    - coverslip ist K5 (fensterglas)
+    - achromat ist auch gut fuer oeffnungsfehler (also auch gut fuer
+      laser fokussierung) 
+    - immersionsoel 1.518 F, abbezahl=45
+    - N-BK7	1.517	64.20
+    - N-K5	1.522	59.50
+    - es ist gut, glaser mit moeglichst weit getrennten abbe zahlen zu
+      nehmen, sonst werden die linsen sehr krumm
+    - am unempfindlichsten ist aplanatisch korrektion damit wird auch
+      saggitalcoma korrigiert, geht nur fuer bestimmte paerchen (z.b
+      60, 35), parabel im glasdiagramm
+    - achromat ist als kamera objektiv ungeeignet
+    - es gibt neu-achromat, der ist im feld besser
+  - apochromate beduerfen glaeser anomale partielle dispersion
+    - eiserne linie (enthaelt gute glaeser, ausserhalb lanthan oder
+      phosphor)
+    - man braucht ein glas was von der normalgeraden abweicht
+  - glaeser mit gleicher brechzahl aber extrem unterschiedlicher abbezahl
+    - SK16 1.62031 60
+    - F9   1.62030 38
+    - gruen sieht den uebergang nicht aber rot und blau
+    - SSK2 1.62218 53
+    - F13  1.62222 36
+    - gibt eine gewisse entkopplung
+  - telephoto brennweite sehr viel groesser als schnittweite
+    - braucht in der mitte einen grossen winkel
+    - schiebt erste hauptebene weit vor system, verringert baulaenge
+  - retrofokus system
+    - umgedreht
+    - zerstreuung gefolgt von sammellinse
+    - hauptebene zwischen letzter linse und bild
+    - fuer systeme mit grossen arbeitsabstand
   
+* system design phases
+  - paraxiales layout
+  - seidelsche bildtheorie gibt gute einsicht in funktionieren des
+    systems (heute probiert man im wesentlichen)
+  - 90 brechungen an flaechen am tag war 1950 der rekord (sein
+    vorgaenger)
+  - nach dem weltkrieg hat man nach 7 strahlen ein objektiv gebaut
+  - haferkorn "synthese optische systeme", nomogramme, ddr
+    formelgraeber ueber drei seiten 
+    - omega randstrahl hoehe
+    - geht nur analytisch fuer 2 linsen
+  - aproach of shafer
+    - hat systematischen ansatz mit asphaeren versucht
+   
+
