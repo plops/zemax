@@ -1,3 +1,5 @@
+
+
 * introduction
 - http://www.jenapolis.de/2012/05/prof-dr-herbert-gross-ist-neuer-professor-fuer-theorie-optischer-systeme-der-uni-jena/
   - Prof. Gross Der 57-Jährige hat mehr als drei Jahrzehnte für das
@@ -10,6 +12,58 @@
 - english slides are on http://www.iap.uni-jena.de/teaching-lightBox-1-lectureID-23.html
 - z ist optische achse
 
+* coordinate systems
+ - y meridional
+ - x sagittal
+ - z optical axis
+ - negative to the left
+ - radius is positive when center of curvature lies to the right of
+   the surface
+ - angle is positive when measured counter clockwise
+* start with sample systems
+  - 3 surfaces are always necessary:
+    - object
+    - stop to define relative opening of the system
+    - image
+  - file menu
+    - storage
+    - switch for non-sequential mode
+    - insert a whole lens, e.g. to separate illumination
+    - editor preferences
+      - number of displayed digits
+      - colors for the drawings
+  - lens data editor, description of the columns
+    - object, image, stop plane
+    - surface types
+      - standard: spherical
+    - comment
+    - radius 
+      - infinity means plane
+    - thickness (of the material behind the surface)
+      - infinity can't be drawn, mark the first line
+      - press insert to add additional surface
+      - double click and change thickness to 20
+      - go to settings and change number of surfaces
+      - right mouse click
+	- select do not draw this surface
+    - material
+    - semi-diameter
+      - these are defined by the rays in the system (so that all can
+        pass through)
+      - if we fix to 28 we get a U (user defined)
+	and some of the rays are cut off
+    - then there are more context sensitive parameters depending on
+      the surface type
+    - conic parameter
+      - ellipse, parabola
+    - long list of more parameters for aspheric surfaces
+  - configure picture
+    - add more rays
+    - suppress frame (text in bottom)
+  - wavelength
+    - f, b, c
+    - selection with important wavelengths, e.g. HeNe
+  - 
 ** parameter
  - single step
  - surface and transition
